@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f8453db57f1747d7808b64710af2b3ae" Name="Diagram1">
+        <EntityTypeShape EntityType="DataDemoShareCodeModel.BanCode" Width="1.5" PointX="3" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataDemoShareCodeModel.DanhMuc" Width="1.5" PointX="0.5" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataDemoShareCodeModel.Demo" Width="1.5" PointX="3" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataDemoShareCodeModel.NguoiDung" Width="1.5" PointX="6.75" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataDemoShareCodeModel.PhanLoaiDanhMuc" Width="1.5" PointX="3" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataDemoShareCodeModel.sysdiagram" Width="1.5" PointX="5.75" PointY="5.75" IsExpanded="true" />
+        <AssociationConnector Association="DataDemoShareCodeModel.FK_NguoiDung_BanCode" ManuallyRouted="false" />
+        <AssociationConnector Association="DataDemoShareCodeModel.FK_Demo_DanhMuc" ManuallyRouted="false" />
+        <AssociationConnector Association="DataDemoShareCodeModel.FK_NguoiDung_DanhMuc" ManuallyRouted="false" />
+        <AssociationConnector Association="DataDemoShareCodeModel.FK_NguoiDung_DanhMuc1" ManuallyRouted="false" />
+        <AssociationConnector Association="DataDemoShareCodeModel.FK_NguoiDung_Demo" ManuallyRouted="false" />
+        <AssociationConnector Association="DataDemoShareCodeModel.FK_NguoiDung_PhanLoaiDanhMuc" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,7 @@
+﻿@using ChiaSeCode_TTV.Models;
+@model List<DanhMuc>
+
+@foreach (var item in Model)
+{
+    <li><a href="@Url.Action("DemoDanhMuc", new {@madanhmuc=item.MaDanhMuc })">@item.TenDanhMuc</a></li>
+}

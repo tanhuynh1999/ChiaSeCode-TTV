@@ -1,0 +1,15 @@
+﻿@using ChiaSeCode_TTV.Models;
+@model List<Demo>
+
+
+
+@foreach (var item in Model)
+{
+    <li class="w3-padding-16">
+        <a href="@Url.Action("xemchitietdemo", new { @mademo=item.MaDemo})" style="text-decoration: none">
+            <img src="@Url.Content("~/img/"+item.Anh)" alt="Norway" style="width:60%;border-radius: 5px 5px 5px 5px; height: 100px;" class="w3-hover-opacity">
+            <br /><b></b><b style="color: red;"><i class="fas fa-angle-right"></i>&nbsp;@item.TenDemo</b>
+        </a>
+
+    </li>
+}

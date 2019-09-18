@@ -1,0 +1,92 @@
+﻿@using PagedList;
+@using PagedList.Mvc;
+@model PagedList.PagedList<ChiaSeCode_TTV.Models.Demo>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Layout/AdminLayout.cshtml";
+}
+<p>
+    @Html.ActionLink("THÊM MỚI", "add")
+</p>
+<table class="table">
+    <tr>
+
+        <th>
+            @Html.DisplayNameFor(model => model.First().MaDemo)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.First().TenDemo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().MoTa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().Anh)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().NgonNgu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().NguoiDang)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().TrangChu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().MaDanhMuc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().NoiBat)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaDemo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenDemo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MoTa)
+            </td>
+            <td>
+                <img src="@Url.Content("~/img/"+item.Anh)" alt="Norway" style="width:100px; height: 50px;" class="w3-hover-opacity">
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NgonNgu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NguoiDang)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TrangChu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DanhMuc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NoiBat)
+            </td>
+            <td>
+                @Html.ActionLink("Sửa", "sua", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Hiển thị", "hienthi", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Xóa", "xoa", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+    }
+
+</table>
+<div style="margin-left: 30%;">
+    Số Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)/ @Model.PageCount
+
+    <div class="phantrang">
+        <div style="text-decoration: none;">@Html.PagedListPager(Model, Page => Url.Action("Index", new { Page = Page }))</div>
+    </div>
+</div>
+
